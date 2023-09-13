@@ -1,0 +1,35 @@
+@import '../../base.scss';
+
+.cards-view {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.selected-card {
+    display: flex;
+}
+
+.card {
+    cursor: pointer;
+
+    &__img {
+        width: 24rem;
+        height: auto;
+        border-radius: 4px;
+    }
+
+    &__name {
+        margin-top: .8rem;
+        font-size: 1.8rem;
+        color: #fff
+    }
+}
+
+.card__list {
+    padding: 1.6rem;
+    margin-top: auto;
+    background: $primary;
+    display: flex;
+    gap: 2.4rem;
+}

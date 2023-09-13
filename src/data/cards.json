@@ -1,0 +1,31 @@
+{
+    "cards": [
+        {
+            "id": 561,
+            "name": "Jõulukaart 1",
+            "font": "Lato",
+            "color": "#333",
+            "category": "christmas",
+            "image": "Kaart christmas 1.jpg",
+            "alt": "jõulukaart 1"
+        },
+        {
+            "id": 662,
+            "name": "Jõulukaart 2",
+            "font": "Lato",
+            "color": "#333",
+            "category": "christmas",
+            "image": "Kaart christmas 2.jpg",
+            "alt": "jõulukaart 2"
+        },
+        {
+            "id": 262,
+            "name": "Jõulukaart 3",
+            "font": "Lato",
+            "color": "#333",
+            "category": "christmas",
+            "image": "Kaart christmas 3.jpg",
+            "alt": "jõulukaart 3"
+        }
+    ]
+}
