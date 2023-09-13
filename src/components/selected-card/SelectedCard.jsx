@@ -57,7 +57,7 @@ function SelectedCard({selectedImg}) {
            context.font = '24px Arial';
            context.fillText(text, textCenter, 320);
         };
-      }, [selectedImg, handleHeadingChange, handleMessageChange, handleTextChange]);
+      }, [selectedImg, heading, message, text]);
     
         
 
