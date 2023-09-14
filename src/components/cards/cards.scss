@@ -14,15 +14,24 @@
     cursor: pointer;
 
     &__img {
-        width: 24rem;
+        width: 16rem;
         height: auto;
         border-radius: 4px;
+
+        @include respond(big-desktop) {
+            width: 24rem;
+        }
     }
 
     &__name {
         margin-top: .8rem;
-        font-size: 1.8rem;
-        color: #fff
+        font-size: 1.6rem;
+        color: #fff;
+
+        @include respond(big-desktop) {
+            margin-top: .8rem;
+            font-size: 1.8rem;
+        }
     }
 }
 

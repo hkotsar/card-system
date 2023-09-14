@@ -3,7 +3,11 @@
 .selected-card {
     display: flex;
     
-    height: 60rem;
+    height: 100%;
+
+    @include respond(big-desktop) {
+        height: 74rem;
+    }
 
     &__message {
         text-align: center;
@@ -19,8 +23,12 @@
 
 .sidebar {
     background: #fff;
-    height: 76vh;
-    width: 40rem;
+    height: 88vh;
+    width: 32rem;
+
+    @include respond(big-desktop) {
+        width: 40rem;
+    }
 }
 
 .canvas {
@@ -63,7 +71,7 @@
 
     &__button {
         margin-top: 3.2rem;
-        width: 32rem;
+        width: 24rem;
         padding: 1.6rem 2.4rem;
         font-size: 1.6rem;
         border: none;
@@ -71,5 +79,13 @@
         color: $white;
         border-radius: 8px;
         cursor: pointer;
+
+        @include respond(big-desktop) {
+            width: 32rem;
+        }
     }
+}
+
+.canvas {
+    border: 1px solid $secondary;
 }
