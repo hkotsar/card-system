@@ -109,7 +109,7 @@ function SelectedCard({selectedImg}) {
                 <button className="form__button" onClick={generateImage}>Genereeri kaart</button>
             </div>
         </aside>
-        <canvas className="canvas" ref={canvasRef} width={566} height={396} />
+        <canvas className="canvas" ref={canvasRef} width={888} height={556} />
     </div>
   )
 }
