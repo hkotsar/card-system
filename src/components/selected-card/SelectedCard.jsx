@@ -45,7 +45,7 @@ function SelectedCard({selectedImg}) {
            
            context.fillStyle = '#333';
            context.font = '24px Arial';
-           context.fillText(heading, headingCenter, 96);
+           context.fillText(heading, headingCenter, 120);
     
            
            context.fillStyle = '#333';
@@ -55,7 +55,7 @@ function SelectedCard({selectedImg}) {
 
            context.fillStyle = '#333';
            context.font = '24px Arial';
-           context.fillText(text, textCenter, 320);
+           context.fillText(text, textCenter, 280);
         };
       }, [selectedImg, heading, message, text]);
     
@@ -109,7 +109,7 @@ function SelectedCard({selectedImg}) {
                 <button className="form__button" onClick={generateImage}>Genereeri kaart</button>
             </div>
         </aside>
-        <canvas className="canvas" ref={canvasRef} width={888} height={556} />
+        <canvas className="canvas" ref={canvasRef} width={600} height={400} />
     </div>
   )
 }

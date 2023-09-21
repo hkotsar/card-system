@@ -26,6 +26,15 @@
             "category": "christmas",
             "image": "Kaart christmas 3.jpg",
             "alt": "jõulukaart 3"
+        },
+        {
+            "id": 263,
+            "name": "Kaardimall",
+            "font": "Lato",
+            "color": "#333",
+            "category": "christmas",
+            "image": "template.jpg",
+            "alt": "jõulukaart 3"
         }
     ]
 }
