@@ -11,14 +11,15 @@ function CardView() {
     };
 
     const data = useContext(CardsContext)
-
+    console.log(selectedCard)
   return (
     <>
         <section className="cards-view">
             <div>
                 {selectedCard ? (
                 <>
-                    <SelectedCard selectedImg={`../../images/${selectedCard.image}`}/>
+                    <SelectedCard textColor={selectedCard.color} selectedImg={`../../images/${selectedCard.image}`} alt={selectedCard.alt}/>
+                    
                 </>
                 ) : (
                     <p className="selected-card__message">Hetkel pole kaarti valitud</p>

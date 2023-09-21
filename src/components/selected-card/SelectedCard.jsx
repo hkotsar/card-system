@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './selected-card.scss';
 
-function SelectedCard({selectedImg}) {
+function SelectedCard({selectedImg, textColor, alt}) {
     const [heading, setHeading] = useState('');
     const [message, setMessage] = useState('');
     const [text, setText] = useState('');
@@ -43,21 +43,21 @@ function SelectedCard({selectedImg}) {
           
     
            
-           context.fillStyle = '#333';
-           context.font = '24px Arial';
+           context.fillStyle = textColor;
+           context.font = '24px Montserrat';
            context.fillText(heading, headingCenter, 120);
     
            
-           context.fillStyle = '#333';
-           context.font = '24px Arial';
+           context.fillStyle = textColor;
+           context.font = '24px Montserrat';
            context.fillText(message, messageCenter, 200);
 
 
-           context.fillStyle = '#333';
-           context.font = '24px Arial';
+           context.fillStyle = textColor;
+           context.font = '24px Montserrat';
            context.fillText(text, textCenter, 280);
         };
-      }, [selectedImg, heading, message, text]);
+      }, [textColor, selectedImg, heading, message, text]);
     
         
 
@@ -70,7 +70,7 @@ function SelectedCard({selectedImg}) {
         // Create a download link
         const a = document.createElement('a');
         a.href = dataURL;
-        a.download = 'generated_image.jpeg';
+        a.download = `${alt}.jpeg`;
         a.click();
     };
 
@@ -89,13 +89,19 @@ function SelectedCard({selectedImg}) {
                 </div>
                 <div className="form__group">
                     <label className="form__label">Label</label>
-                    <textarea
+                    <input
+                        className="form__input"
+                        type="text"
+                        value={message}
+                        onChange={handleMessageChange}
+                    />
+                    {/* <textarea
                         className="form__textarea"
                         name="message" 
                         id="" cols="30" rows="10"  
                         value={message} 
                         onChange={handleMessageChange}>
-                    </textarea>
+                    </textarea> */}
                 </div>
                 <div className="form__group">
                     <label className="form__label">Label</label>

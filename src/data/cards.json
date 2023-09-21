@@ -1,40 +1,41 @@
 {
     "cards": [
         {
-            "id": 561,
+            "id": 263,
+            "name": "Kaardimall 1",
+            "font": "Lato",
+            "color": "#26282a",
+            "category": "christmas",
+            "image": "template.jpg",
+            "alt": "kaardimall"
+        },
+        {
+            "id": 243,
+            "name": "Kaardimall 2",
+            "font": "Lato",
+            "color": "#fff",
+            "category": "christmas",
+            "image": "template-2.jpg",
+            "alt": "kaardimall"
+        },
+        {
+            "id": 262,
             "name": "Jõulukaart 1",
             "font": "Lato",
             "color": "#333",
             "category": "christmas",
-            "image": "Kaart christmas 1.jpg",
-            "alt": "jõulukaart 1"
+            "image": "christmas_template-1.jpg",
+            "alt": "voco jõulukaart"
         },
         {
-            "id": 662,
+            "id": 264,
             "name": "Jõulukaart 2",
             "font": "Lato",
-            "color": "#333",
+            "color": "#EA2A2A",
             "category": "christmas",
-            "image": "Kaart christmas 2.jpg",
-            "alt": "jõulukaart 2"
-        },
-        {
-            "id": 262,
-            "name": "Jõulukaart 3",
-            "font": "Lato",
-            "color": "#333",
-            "category": "christmas",
-            "image": "Kaart christmas 3.jpg",
-            "alt": "jõulukaart 3"
-        },
-        {
-            "id": 263,
-            "name": "Kaardimall",
-            "font": "Lato",
-            "color": "#333",
-            "category": "christmas",
-            "image": "template.jpg",
-            "alt": "jõulukaart 3"
+            "image": "christmas_template-2.jpg",
+            "alt": "voco jõulukaart"
         }
+
     ]
 }
