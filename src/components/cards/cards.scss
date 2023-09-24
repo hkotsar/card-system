@@ -35,10 +35,25 @@
     }
 }
 
-.card__list {
-    padding: 1.6rem;
+.cards {
     margin-top: auto;
+    display: flex;
+    padding: 1.6rem;
     background: $primary;
+    width: 100%;
+    
+}
+
+.card__list {
+    
+    
+    
     display: flex;
     gap: 2.4rem;
+    
+    
+    @include respond(tab-land) {
+        width: 120rem;
+        overflow-x: scroll;
+    }
 }

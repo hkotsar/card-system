@@ -17,4 +17,5 @@ body {
     background: $background;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }

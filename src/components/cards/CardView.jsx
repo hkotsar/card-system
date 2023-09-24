@@ -31,13 +31,16 @@ function CardView() {
                     </>
                 )}
             </div>
-            <div className='card__list'>
-                {
-                    data.cards.map(item => (
-                        <Card key={item.id} card={item} name={item.name} image={item.image} alt={item.alt} onSelect={handleCardSelect} />
-                    ))
-                }
+            <div className="cards">
+                <div className='card__list'>
+                    {
+                        data.cards.map(item => (
+                            <Card key={item.id} card={item} name={item.name} image={item.image} alt={item.alt} onSelect={handleCardSelect} />
+                        ))
+                    }
+                </div>
             </div>
+            
         </section>
     </>
   )
