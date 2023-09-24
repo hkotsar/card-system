@@ -3,6 +3,7 @@ import CardsContext from '../../context/cards';
 import Card from './Card';
 import SelectedCard from '../selected-card/SelectedCard';
 import './cards.scss';
+import logo from '../../assets/voco it kool logod RGB-02.png'
 
 function CardView() {
     const [selectedCard, setSelectedCard] = useState(null);
@@ -22,7 +23,12 @@ function CardView() {
                     
                 </>
                 ) : (
-                    <p className="selected-card__message">Hetkel pole kaarti valitud</p>
+                    <>
+                        <div className='view'>
+                            <img className="logo" src={logo} alt="Logo" />
+                            <p className="selected-card__message">Palun valige sobiv kaart.</p>
+                        </div>
+                    </>
                 )}
             </div>
             <div className='card__list'>

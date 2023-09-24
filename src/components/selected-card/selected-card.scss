@@ -15,11 +15,21 @@
         font-size: 2.4rem;
     }
 
-    &__message {
-        margin-top: 16%;
-    }
 }
 
+.logo {
+    width: 32rem;
+    height: auto;
+    margin-bottom: 3.2rem;
+}
+
+.view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14%;
+}
 
 .sidebar {
     background: #fff;
