@@ -4,7 +4,8 @@ import './selected-card.scss';
 function SelectedCard({selectedImg, textColor, alt}) {
     const [heading, setHeading] = useState('');
     const [message, setMessage] = useState('');
-    const [text, setText] = useState('');
+    const [messageOptional, setMessageOptional] = useState('');
+    const [other, setText] = useState('');
     const canvasRef = useRef(null);
     console.log(selectedImg + 'sdsdsd')
 
@@ -15,6 +16,10 @@ function SelectedCard({selectedImg, textColor, alt}) {
 
     const handleMessageChange = (e) => {
         setMessage(e.target.value);
+    };
+
+    const handleMessageOptionalChange = (e) => {
+        setMessageOptional(e.target.value);
     };
 
     const handleTextChange = (e) => {
@@ -30,34 +35,61 @@ function SelectedCard({selectedImg, textColor, alt}) {
     
         image.onload = () => {
           
-          context.clearRect(0, 0, canvas.width, canvas.height);
-    
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+
+            const headingMargin = 50;
+            const textMargin = 4;
+            const textOptionalMargin = -28;
+            const otherMargin = -76;
+
+            const headingFontSize = 32; 
+            const textFontSize = 20;
+            context.fillStyle = textColor;
           
-          context.drawImage(image, 0, 0, canvas.width, canvas.height);
+            context.font = `${headingFontSize}px Montserrat`;
+            const headingWith = context.measureText(heading).width;
 
-          const centerX = canvas.width / 2;
+            context.font = `${textFontSize}px Montserrat`;
+            const textWith = context.measureText(message).width;
+            const textOptionalWidth = context.measureText(messageOptional).width;
 
-          const headingCenter = centerX - context.measureText(heading).width / 2;
-          const messageCenter = centerX - context.measureText(message).width / 2;
-          const textCenter = centerX - context.measureText(text).width / 2;
+            const otherWith = context.measureText(other).width
+
+
+            const headingX = centerX - headingWith / 2;
+            const headingY = centerY - headingMargin - headingFontSize;
+
+            const textX = centerX - textWith / 2;
+            const textY = centerY - textMargin;
+
+            const textOptionalX = centerX - textOptionalWidth / 2;
+            const textOptionalY = centerY - textOptionalMargin;
+
+            const otherX = centerX - otherWith / 2;
+            const otherY =  centerY - otherMargin;
           
     
            
-           context.fillStyle = textColor;
-           context.font = '24px Montserrat';
-           context.fillText(heading, headingCenter, 120);
-    
            
-           context.fillStyle = textColor;
-           context.font = '24px Montserrat';
-           context.fillText(message, messageCenter, 200);
+           
+            context.font = `${headingFontSize}px Montserrat`;
+            context.fillText(heading, headingX, headingY);
+    
+            context.font = `${textFontSize}px Montserrat`;
+            context.fillText(message, textX, textY);
 
+            context.font = `${textFontSize}px Montserrat`;
+            context.fillText(messageOptional, textOptionalX, textOptionalY);
 
-           context.fillStyle = textColor;
-           context.font = '24px Montserrat';
-           context.fillText(text, textCenter, 280);
+            context.font = `${textFontSize}px Montserrat`;
+            context.fillText(other, otherX, otherY);
+
         };
-      }, [textColor, selectedImg, heading, message, text]);
+      }, [textColor, selectedImg, heading, message, messageOptional, other]);
     
         
 
@@ -79,7 +111,7 @@ function SelectedCard({selectedImg, textColor, alt}) {
         <aside className="sidebar">
             <div className="form">
                 <div className="form__group">
-                    <label className="form__label">Label</label>
+                    <label className="form__label">Pöördumine</label>
                     <input
                         className="form__input"
                         type="text"
@@ -88,27 +120,33 @@ function SelectedCard({selectedImg, textColor, alt}) {
                     />
                 </div>
                 <div className="form__group">
-                    <label className="form__label">Label</label>
-                    <input
-                        className="form__input"
-                        type="text"
-                        value={message}
-                        onChange={handleMessageChange}
-                    />
-                    {/* <textarea
+                    <label className="form__label">Sisu tekst</label>
+                    <textarea
                         className="form__textarea"
                         name="message" 
-                        id="" cols="30" rows="10"  
+                        cols="30" rows="2"
+                        spellCheck={false}    
                         value={message} 
                         onChange={handleMessageChange}>
-                    </textarea> */}
+                    </textarea>
                 </div>
                 <div className="form__group">
-                    <label className="form__label">Label</label>
+                    <label className="form__label">Sisu tekst (vabal valikul)</label>
+                    <textarea
+                        className="form__textarea"
+                        name="message" 
+                        cols="30" rows="2"
+                        spellCheck={false}  
+                        value={messageOptional} 
+                        onChange={handleMessageOptionalChange}>
+                    </textarea>
+                </div>
+                <div className="form__group">
+                    <label className="form__label">Kuupäev/muu</label>
                     <input
                         className="form__input"
                         type="text"
-                        value={text}
+                        value={other}
                         onChange={handleTextChange}
                     />
                 </div>

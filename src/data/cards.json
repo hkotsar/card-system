@@ -2,27 +2,24 @@
     "cards": [
         {
             "id": 263,
-            "name": "Kaardimall 1",
-            "font": "Lato",
+            "name": "Sünnipäev 1",
             "color": "#26282a",
-            "category": "christmas",
+            "category": "birthday",
             "image": "template.jpg",
-            "alt": "kaardimall"
+            "alt": "Sünnipäev"
         },
         {
             "id": 243,
-            "name": "Kaardimall 2",
-            "font": "Lato",
-            "color": "#fff",
-            "category": "christmas",
-            "image": "template-2.jpg",
-            "alt": "kaardimall"
+            "name": "Sünnipäev 2",
+            "color": "#26282a",
+            "category": "birthday",
+            "image": "birthday-2.jpg",
+            "alt": "Sünnipäev"
         },
         {
             "id": 262,
             "name": "Jõulukaart 1",
-            "font": "Lato",
-            "color": "#333",
+            "color": "#26282a",
             "category": "christmas",
             "image": "christmas_template-1.jpg",
             "alt": "voco jõulukaart"
@@ -30,11 +27,26 @@
         {
             "id": 264,
             "name": "Jõulukaart 2",
-            "font": "Lato",
-            "color": "#EA2A2A",
+            "color": "#26282a",
             "category": "christmas",
-            "image": "christmas_template-2.jpg",
+            "image": "christmas-2.jpg",
             "alt": "voco jõulukaart"
+        },
+        {
+            "id": 265,
+            "name": "Õnnitlus",
+            "color": "#26282a",
+            "category": "fun",
+            "image": "greeting.jpg",
+            "alt": "Õnnitlus"
+        },
+        {
+            "id": 266,
+            "name": "Fun",
+            "color": "#26282a",
+            "category": "fun",
+            "image": "fun.jpg",
+            "alt": "Fun"
         }
 
     ]
