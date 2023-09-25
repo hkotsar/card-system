@@ -26,7 +26,7 @@ function CardView() {
                     <>
                         <div className='view'>
                             <img className="logo" src={logo} alt="Logo" />
-                            <p className="selected-card__message">Palun valige sobiv kaart ja edasi täitke vasakul vajalikud väljad.</p>
+                            <p className="selected-card__message">Palun valige sobiv kaart ja seejärel täitke vasakul vajalikud väljad.</p>
                         </div>
                     </>
                 )}
