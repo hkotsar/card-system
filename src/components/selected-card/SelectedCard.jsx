@@ -37,6 +37,7 @@ function SelectedCard({selectedImg, textColor, alt}) {
           
             context.clearRect(0, 0, canvas.width, canvas.height);
             context.drawImage(image, 0, 0, canvas.width, canvas.height);
+            context.imageSmoothingEnabled = true;
 
             const centerX = canvas.width / 2;
             const centerY = canvas.height / 2;
@@ -47,7 +48,7 @@ function SelectedCard({selectedImg, textColor, alt}) {
             const otherMargin = -76;
 
             const headingFontSize = 32; 
-            const textFontSize = 20;
+            const textFontSize = 22;
             context.fillStyle = textColor;
           
             context.font = `${headingFontSize}px Montserrat`;
@@ -97,12 +98,12 @@ function SelectedCard({selectedImg, textColor, alt}) {
         const canvas = canvasRef.current;
     
         // Generate a data URL for the canvas content (JPEG format)
-        const dataURL = canvas.toDataURL('image/jpeg');
+        const dataURL = canvas.toDataURL('image/png', 1.0);
     
         // Create a download link
         const a = document.createElement('a');
         a.href = dataURL;
-        a.download = `${alt}.jpeg`;
+        a.download = `${alt}.png`;
         a.click();
     };
 
@@ -131,7 +132,7 @@ function SelectedCard({selectedImg, textColor, alt}) {
                     </textarea>
                 </div>
                 <div className="form__group">
-                    <label className="form__label">Sisu tekst (vabal valikul)</label>
+                    <label className="form__label">Sisu tekst (2.rida vabal valikul)</label>
                     <textarea
                         className="form__textarea"
                         name="message" 

@@ -5,7 +5,7 @@
             "name": "Sünnipäev 1",
             "color": "#26282a",
             "category": "birthday",
-            "image": "birthday-1.jpg",
+            "image": "birthday-1.png",
             "alt": "Sünnipäev"
         },
         {
@@ -13,7 +13,7 @@
             "name": "Sünnipäev 2",
             "color": "#26282a",
             "category": "birthday",
-            "image": "birthday-2.jpg",
+            "image": "birthday-2.png",
             "alt": "Sünnipäev"
         },
         {
@@ -21,7 +21,7 @@
             "name": "Jõulukaart 1",
             "color": "#26282a",
             "category": "christmas",
-            "image": "christmas-1.jpg",
+            "image": "christmas-1.png",
             "alt": "voco jõulukaart"
         },
         {
@@ -29,7 +29,7 @@
             "name": "Jõulukaart 2",
             "color": "#26282a",
             "category": "christmas",
-            "image": "christmas-2.jpg",
+            "image": "christmas-2.png",
             "alt": "voco jõulukaart"
         },
         {
@@ -37,7 +37,7 @@
             "name": "Õnnitlus",
             "color": "#26282a",
             "category": "fun",
-            "image": "greeting.jpg",
+            "image": "greeting.png",
             "alt": "Õnnitlus"
         },
         {
@@ -45,7 +45,7 @@
             "name": "Fun",
             "color": "#26282a",
             "category": "fun",
-            "image": "fun.jpg",
+            "image": "fun.png",
             "alt": "Fun"
         }
 
